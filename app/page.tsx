@@ -137,13 +137,12 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+          Full Stack Developer skilled in building modern web applications using Next.js, React.js, and the MERN stack. Passionate about crafting fast, responsive, and scalable solutions.
           </p>
         </div>
       </motion.section>
 
-      <motion.section
+      {/* <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -170,9 +169,9 @@ export default function Personal() {
             </div>
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
 
-      <motion.section
+      {/* <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -208,7 +207,7 @@ export default function Personal() {
             </a>
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
 
       <motion.section
         variants={VARIANTS_SECTION}
