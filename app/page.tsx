@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
-import { XIcon } from 'lucide-react'
+import { ArrowRightIcon, XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
@@ -13,12 +13,14 @@ import {
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
+  Skills,
   PROJECTS,
   WORK_EXPERIENCE,
   BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
+import Image from 'next/image'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -136,31 +138,60 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex-1">
-          <p className="text-zinc-600 dark:text-zinc-400">
-          Full Stack Developer skilled in building modern web applications using Next.js, React.js, and the MERN stack. Passionate about crafting fast, responsive, and scalable solutions.
+          <Link href="/" className="font-medium text-black dark:text-white">
+            About Me
+          </Link>
+          <p className="text-zinc-600 dark:text-zinc-400 capitalize">
+            Full Stack Developer skilled in building modern web applications using Next.js, React.js, and the MERN stack. Passionate about crafting fast, responsive, and scalable solutions. Expert In Wordpress Solutions
+          </p>
+        </div>
+        <div className="flex-1 mt-10 ">
+          <Link href="/" className="font-medium text-black dark:text-white">
+            Skills
+          </Link>
+          <p className="text-zinc-600 dark:text-zinc-400 capitalize">
+            {Skills.map((skill, index) => (
+              <span
+                key={index}
+                className="inline-block m-1 rounded-lg bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100"
+              >
+                {skill}
+              </span>
+            ))}
           </p>
         </div>
       </motion.section>
 
-      {/* <motion.section
+      <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 mb-5">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
+                {project.video && <ProjectVideo src={project.video} />}
+                {project.image && (
+                  <Link href={project.link} target="_blank"  >
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      className="aspect-video w-full rounded-xl"
+                      width={500}
+                      height={500}
+                    />
+                  </Link>
+                )}
               </div>
               <div className="px-1">
                 <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                  className="font-xl group relative font-semibold inline-block  text-zinc-900 dark:text-zinc-50"
                   href={project.link}
                   target="_blank"
                 >
                   {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
+                  <span className="absolute  bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
                 </a>
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
@@ -169,20 +200,21 @@ export default function Personal() {
             </div>
           ))}
         </div>
-      </motion.section> */}
-
-      {/* <motion.section
+        <span className='text-zinc-900 dark:text-zinc-300 hover:text-black italic dark:hover:text-white duration-300 transition-colors' >
+          <a href="https://mubashirdev.netlify.app/projects" target='_blank' >
+            Explore More Projects < ArrowRightIcon size={20} className='inline-block' />
+          </a>
+        </span>
+      </motion.section>
+      <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
         <div className="flex flex-col space-y-2">
           {WORK_EXPERIENCE.map((job) => (
-            <a
+            <span
               className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
-              href={job.link}
-              target="_blank"
-              rel="noopener noreferrer"
               key={job.id}
             >
               <Spotlight
@@ -204,10 +236,10 @@ export default function Personal() {
                   </p>
                 </div>
               </div>
-            </a>
+            </span>
           ))}
         </div>
-      </motion.section> */}
+      </motion.section>
 
       <motion.section
         variants={VARIANTS_SECTION}

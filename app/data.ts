@@ -2,7 +2,8 @@ type Project = {
   name: string
   description: string
   link: string
-  video: string
+  video?: string
+  image?: string
   id: string
 }
 
@@ -11,7 +12,6 @@ type WorkExperience = {
   title: string
   start: string
   end: string
-  link: string
   id: string
 }
 
@@ -26,51 +26,107 @@ type SocialLink = {
   label: string
   link: string
 }
+// Define the type for a skill
+type Skill = string;
+
+// Define the array of skills
+export const Skills: Skill[] = [
+  "MERN Stack",
+  "Next JS",
+  "React Js",
+  "Node Js",
+  "Express JS",
+  "Tailwind",
+  "WordPress",
+  "Elementor",
+  "Redux",
+  "Framer Motion",
+  "TypeScript",
+  "Javascript",
+  "Mongo DB",
+  "Oracle DB",
+  "Git",
+  "C++",
+  "AWS",
+  "Azure 365"
+];
+
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
+    name: 'Anvo Financial Calculator',
     description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
+      'Use financial calculators to make smart and rational decisions.',
+    link: 'https://anvo.vercel.app/',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+      'https://res.cloudinary.com/dj4h4yls7/video/upload/v1744556301/bkt0b9b2v0im5jhbs5nc.mp4',
     id: 'project1',
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    name: 'Wrapxen Ecommerce',
+    description: 'Wix Headless with Next.js and Tailwind CSS',
+    link: 'https://wrapxen.vercel.app/',
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/fmg95xkkxddt5pgbjrwi.png',
     id: 'project2',
+  },
+  {
+    name: 'RomeWheels Car Rental',
+    description: 'MERN App With Tailwind CSS and GSAP',
+    link: 'https://romewheels.netlify.app/',
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/zlhqkqh9szjg0iifqvys.png',
+    id: 'project3',
+  },
+  {
+    name: 'Echo Notes',
+    description: 'MERN App designed for efficiently taking and managing notes',
+    link: 'https://romewheels.netlify.app/',
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288736/c5mrdxedasjllddwkcva.png',
+    id: 'project4',
+  },
+  {
+    name: 'Flavusion Online Ordering',
+    description: 'A React App With Redux, Bootstrap and Firebase',
+    link: 'https://flavusion.netlify.app/',
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288736/oafrvypqq53tvnwdtpbt.png',
+    id: 'project5',
+  },
+  {
+    name: 'Aminarts Ecommerce Store',
+    description: 'Custom Built Ecommerce Store with Elementor and Lenis',
+    link: 'https://aminart.shop/',
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/bs6deswgtpqrifp3w0xe.jpg',
+    id: 'project6',
+  },
+  {
+    name: 'Urban Edge Salon',
+    description: 'Site designed with React ,Tailwind CSS and GSAP',
+    link: 'https://urbanedge.netlify.app/',
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288736/rykhkqbvngmqoa4uts1x.png',
+    id: 'project7',
+  },
+  {
+    name: 'Tech N Threads Blogs',
+    description: 'NextJs SSG with Tailwind CSS, NextAuth and ContentLayer',
+    link: 'https://technthread.vercel.app/',
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/ln69nuqhndsqj4vfge70.png',
+    id: 'project8',
   },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
+    company: 'Freelance',
+    title: 'Full Stack Developer | Wordpress Developer',
+    start: '2023',
     end: 'Present',
-    link: 'https://ibelick.com',
     id: 'work1',
   },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
+    company: 'Cyberwing.pk',
+    title: 'Web Developer Intern',
+    start: '2023',
     end: '2024',
-    link: 'https://ibelick.com',
     id: 'work2',
-  },
-  {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
-    id: 'work3',
   },
 ]
 

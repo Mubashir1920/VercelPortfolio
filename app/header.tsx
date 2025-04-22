@@ -13,10 +13,10 @@ export function Header() {
           as="p"
           preset="fade"
           per="char"
-          className="text-zinc-600 dark:text-zinc-500"
+          className="text-zinc-600 dark:text-zinc-300 "
           delay={0.5}
         >
-          Full Stack Developer | MERN Stack | Next.js | React.js
+          Full Stack Developer | Next.js | MERN Stack | React.js | Wordpress Expert
         </TextEffect>
       </div>
     </header>
