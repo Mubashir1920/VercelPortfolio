@@ -53,15 +53,7 @@ export const Skills: Skill[] = [
 
 
 export const PROJECTS: Project[] = [
-  {
-    name: 'Anvo Financial Calculator',
-    description:
-      'Use financial calculators to make smart and rational decisions.',
-    link: 'https://anvo.vercel.app/',
-    video:
-      'https://res.cloudinary.com/dj4h4yls7/video/upload/v1744556301/bkt0b9b2v0im5jhbs5nc.mp4',
-    id: 'project1',
-  },
+
   {
     name: 'Wrapxen Ecommerce',
     description: 'Wix Headless with Next.js and Tailwind CSS',
@@ -75,6 +67,13 @@ export const PROJECTS: Project[] = [
     link: 'https://romewheels.netlify.app/',
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/zlhqkqh9szjg0iifqvys.png',
     id: 'project3',
+  },
+  {
+    name: 'Aminarts Ecommerce Store',
+    description: 'Custom Built Ecommerce Store with Elementor and Lenis on WordPress',
+    link: 'https://aminart.talhajeweller.pk/',
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/bs6deswgtpqrifp3w0xe.jpg',
+    id: 'project6',
   },
   {
     name: 'Echo Notes',
@@ -91,13 +90,6 @@ export const PROJECTS: Project[] = [
     id: 'project5',
   },
   {
-    name: 'Aminarts Ecommerce Store',
-    description: 'Custom Built Ecommerce Store with Elementor and Lenis',
-    link: 'https://aminart.shop/',
-    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/bs6deswgtpqrifp3w0xe.jpg',
-    id: 'project6',
-  },
-  {
     name: 'Urban Edge Salon',
     description: 'Site designed with React ,Tailwind CSS and GSAP',
     link: 'https://urbanedge.netlify.app/',
@@ -110,6 +102,15 @@ export const PROJECTS: Project[] = [
     link: 'https://technthread.vercel.app/',
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/ln69nuqhndsqj4vfge70.png',
     id: 'project8',
+  },
+  {
+    name: 'Anvo Financial Calculator',
+    description:
+      'Use financial calculators to make smart and rational decisions.',
+    link: 'https://anvo.vercel.app/',
+    video:
+      'https://res.cloudinary.com/dj4h4yls7/video/upload/v1744556301/bkt0b9b2v0im5jhbs5nc.mp4',
+    id: 'project9',
   },
 ]
 
@@ -125,7 +126,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     company: 'Cyberwing.pk',
     title: 'Web Developer Intern',
     start: '2023',
-    end: '2024',
+    end: '2024 (3Months)',
     id: 'work2',
   },
 ]
