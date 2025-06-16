@@ -59,59 +59,72 @@ export const PROJECTS: Project[] = [
     description: 'Wix Headless with Next.js and Tailwind CSS',
     link: 'https://wrapxen.vercel.app/',
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/fmg95xkkxddt5pgbjrwi.png',
-    id: 'project2',
+    id: 'project1',
   },
   {
     name: 'RomeWheels Car Rental',
     description: 'MERN App With Tailwind CSS and GSAP',
     link: 'https://romewheels.netlify.app/',
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/zlhqkqh9szjg0iifqvys.png',
+    id: 'project2',
+  },
+  {
+    name: "Core Education ",
+    description: "A NextJs Site Built with TailwindCss and Motion.dev",
+    link: "https://coreedu.vercel.app/",
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1750070035/coreedu_bdxdns.png',
     id: 'project3',
+  },
+  {
+    name: "Bayaan Official",
+    description: "Bayaan Official Band Website with Elementor",
+    link: "https://bayaanofficial.com/",
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288737/vmqxlr2h7bqueb535me2.png',
+    id: 'project4',
   },
   {
     name: 'Aminarts Ecommerce Store',
     description: 'Custom Built Ecommerce Store with Elementor and Lenis on WordPress',
     link: 'https://aminart.talhajeweller.pk/',
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/bs6deswgtpqrifp3w0xe.jpg',
-    id: 'project6',
+    id: 'project5',
   },
   {
     name: 'Echo Notes',
     description: 'MERN App designed for efficiently taking and managing notes',
     link: 'https://romewheels.netlify.app/',
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288736/c5mrdxedasjllddwkcva.png',
-    id: 'project4',
+    id: 'project6',
   },
   {
     name: 'Flavusion Online Ordering',
     description: 'A React App With Redux, Bootstrap and Firebase',
     link: 'https://flavusion.netlify.app/',
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288736/oafrvypqq53tvnwdtpbt.png',
-    id: 'project5',
+    id: 'project7',
   },
   {
     name: 'Urban Edge Salon',
     description: 'Site designed with React ,Tailwind CSS and GSAP',
     link: 'https://urbanedge.netlify.app/',
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288736/rykhkqbvngmqoa4uts1x.png',
-    id: 'project7',
+    id: 'project8',
   },
   {
     name: 'Tech N Threads Blogs',
     description: 'NextJs SSG with Tailwind CSS, NextAuth and ContentLayer',
     link: 'https://technthread.vercel.app/',
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288735/ln69nuqhndsqj4vfge70.png',
-    id: 'project8',
+    id: 'project9',
   },
   {
     name: 'Anvo Financial Calculator',
-    description:
-      'Use financial calculators to make smart and rational decisions.',
+    description: 'Use financial calculators to make smart and rational decisions.',
     link: 'https://anvo.vercel.app/',
-    video:
-      'https://res.cloudinary.com/dj4h4yls7/video/upload/v1744556301/bkt0b9b2v0im5jhbs5nc.mp4',
-    id: 'project9',
-  },
+    video: 'https://res.cloudinary.com/dj4h4yls7/video/upload/v1744556301/bkt0b9b2v0im5jhbs5nc.mp4',
+    id: 'project10',
+  }
+
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
@@ -133,24 +146,10 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    title: 'React’s `useMemo` — What, Why, and When to Use It',
+    description: 'How To Use useMemo in Your React App to Optimize the Performance',
+    link: '/blog/when-and-why-you-need-useMemo',
     uid: 'blog-1',
-  },
-  {
-    title: 'Why I left my job to start my own company',
-    description:
-      'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
-  },
-  {
-    title: 'What I learned from my first year of freelancing',
-    description:
-      'A look back at my first year of freelancing and what I learned',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-3',
   },
 ]
 

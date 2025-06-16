@@ -1,0 +1,123 @@
+
+
+
+# 🧠 React’s `useMemo` — What, Why, and When to Use It
+
+React’s `useMemo` is one of those hooks that seems easy to ignore — until you hit performance bottlenecks or expensive recalculations.
+
+Let’s break down what `useMemo` does, its syntax, some real-life use cases, and how I used it in a food ordering modal to validate user selections.
+
+---
+
+## 🔍 What is `useMemo`?
+
+`useMemo` is a React hook that **memoizes the result of a computation**. This means it **remembers** the result until its dependencies change, so the function inside it doesn’t re-run unnecessarily.
+
+---
+
+## 🧪 Syntax
+
+> ```js
+> const memoizedValue = useMemo(() => {
+>   // Some expensive calculation
+>   return result
+> }, [dependencies])
+> ```
+
+It will re-run the function **only if one or more dependencies change**.
+
+---
+
+## ✅ Why Use It?
+
+- Avoid unnecessary recalculations  
+- Improve performance in frequently re-rendering components  
+- Prevent lag when doing expensive operations  
+
+---
+
+## 💡 Real Use Cases
+
+### 1. **Filtering a Large Dataset**
+
+> ```js
+> const filteredData = useMemo(() => {
+>   return data.filter(item => item.isActive)
+> }, [data])
+> ```
+
+Avoids re-filtering the list unless `data` changes.
+
+---
+
+### 2. **Sorting Expensive Computation**
+
+> ```js
+> const sortedList = useMemo(() => {
+>   return list.sort((a, b) => a.name.localeCompare(b.name))
+> }, [list])
+> ```
+
+Helpful when `list` is large and sorting is costly.
+
+---
+
+### 3. **Derived State from Props**
+
+> ```js
+> const isEligible = useMemo(() => {
+>   return user.age > 18 && user.status === "verified"
+> }, [user.age, user.status])
+> ```
+
+Clean way to derive boolean flags from complex prop values.
+
+---
+
+## 🍕 My Real Use Case — Deal Validator
+
+I was building a food ordering modal where users could select:
+- Pizza sizes  
+- Burger flavors inside meal deals  
+- Quantity of each item  
+
+The “Add to Cart” button had to stay **disabled** until all selections were valid.
+
+So I memoized the validation logic:
+
+> ```js
+> const isAddToCartDisabled = useMemo(() => {
+>   if (category === "Pizza") {
+>     return pizzaSizes.length !== quantity || pizzaSizes.some((size) => !size)
+>   }
+> 
+>   if (category === "Deals" && dealItems.length > 0) {
+>     const nonDefaultItems = dealItems.filter((item) => !item.isDefault)
+>     for (let i = 0; i < nonDefaultItems.length; i++) {
+>       const item = nonDefaultItems[i]
+>       const required = item.quantity * quantity
+>       const current = selectedDealData.selectedFlavours[i] || []
+>       if (current.length !== required || current.some((s) => !s)) {
+>         return true
+>       }
+>     }
+>   }
+> 
+>   return false
+> }, [category, pizzaSizes, quantity, selectedDealData.selectedFlavours, dealItems])
+> ```
+
+This saved unnecessary recomputations on every render while keeping validation fast and clean.
+
+---
+
+## 🚀 Final Thoughts
+
+Use `useMemo` when:
+- You’re running **expensive logic**
+- Your component **re-renders often**
+- You want to **optimize derived values**
+
+Don’t overuse it. But when it fits — it really shines.
+
+---
