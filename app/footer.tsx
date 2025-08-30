@@ -67,6 +67,7 @@ function ThemeSwitch() {
 
 export function Footer() {
   const [clock, setClock] = useState(new Date().toLocaleTimeString())
+  const year = new Date().getFullYear()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -78,9 +79,9 @@ export function Footer() {
 
   return (
     <footer className="mt-24 border-t text-zinc-700 dark:text-cream border-zinc-100 px-0 py-4 dark:border-zinc-400">
-      <div className="flex items-center justify-between">
+      <div className="flex md:flex-row flex-col-reverse gap-2 items-center justify-between">
         <a href="https://x.com/TheTechGuy_1" target="_blank">
-          <span className="text-sm ">© 2025 Mubashir.</span>
+          <span className="text-sm ">© {year} Mubashir.</span>
         </a>
         <div className="px-2 py-1 text-sm  ">
           Local Time : {clock} LHR

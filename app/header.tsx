@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className="mb-8 flex items-center justify-between">
       <div>
-        <Link href="/" className=" primary-heading   dark:text-white">
+        <Link href="/" className=" primary-heading">
           Muhammad Mubashir
         </Link>
         <TextEffect
