@@ -71,7 +71,7 @@ export const PROJECTS: Project[] = [
   {
     name: "Core Education ",
     description: "A NextJs Site Built with TailwindCss and Motion.dev",
-    link: "https://coreedu.vercel.app/",
+    link: "https://coreeducationpk.vercel.app/",
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1750070035/coreedu_bdxdns.png',
     id: 'project3',
   },
@@ -92,15 +92,15 @@ export const PROJECTS: Project[] = [
   {
     name: 'Echo Notes',
     description: 'MERN App designed for efficiently taking and managing notes',
-    link: 'https://romewheels.netlify.app/',
+    link: 'https://echonote.netlify.app/',
     image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288736/c5mrdxedasjllddwkcva.png',
     id: 'project6',
   },
   {
-    name: 'Flavusion Online Ordering',
-    description: 'A React App With Redux, Bootstrap and Firebase',
-    link: 'https://flavusion.netlify.app/',
-    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1745288736/oafrvypqq53tvnwdtpbt.png',
+    name: 'Hamsburger',
+    description: 'MERN Stack App With Real Time Dashboard For Orders',
+    link: 'https://hamsburger.netlify.app/',
+    image: 'https://res.cloudinary.com/dj4h4yls7/image/upload/v1756552927/Screenshot_30-8-2025_16229_hamsburger.netlify.app_kaaked.jpg',
     id: 'project7',
   },
   {
@@ -123,24 +123,39 @@ export const PROJECTS: Project[] = [
     link: 'https://anvo.vercel.app/',
     video: 'https://res.cloudinary.com/dj4h4yls7/video/upload/v1744556301/bkt0b9b2v0im5jhbs5nc.mp4',
     id: 'project10',
-  }
+  },
+
 
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
+  // {
+  //   company: 'Freelance',
+  //   title: 'MERN Stack | NextJs | Wordpress Developer',
+  //   start: '2023',
+  //   end: 'Present',
+  //   id: 'work1',
+  // },
+  // {
+  //   company: 'Techlio Pvt Ltd',
+  //   title: 'Associate Software Engineer',
+  //   start: '2025',
+  //   end: 'Present',
+  //   id: 'work1',
+  // },
   {
-    company: 'Freelance',
-    title: 'Full Stack Developer | Wordpress Developer',
-    start: '2023',
-    end: 'Present',
-    id: 'work1',
+    company: 'Quality Resource Pvt Ltd',
+    title: 'Web Developer',
+    start: 'June 2025',
+    end: 'August 2025',
+    id: 'work2',
   },
   {
-    company: 'Cyberwing.pk',
+    company: 'Cyberwing Solutions',
     title: 'Web Developer Intern',
     start: '2023',
     end: '2024 (3Months)',
-    id: 'work2',
+    id: 'work3',
   },
 ]
 

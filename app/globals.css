@@ -2,14 +2,26 @@
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:is(.dark *));
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
+
+@theme {
+  --color-primary: #fff;
+  --color-secondary: #000000;
+  --color-cream: #fdf4ec;
+  --font-bebas: 'var(--font-bebas)';
+  --font-montserrat: 'var(--font-montserrat)';
+}
+
+@layer components {
+  .primary-heading {
+    @apply text-secondary font-bebas text-5xl sm:text-6xl  font-bold tracking-normal dark:text-cream uppercase;
+  }
+
+  .secondary-heading {
+    @apply text-secondary font-bebas text-3xl sm:text-4xl font-bold tracking-normal uppercase dark:text-cream;
+  }
+}
+
 @layer base {
   *,
   ::after,

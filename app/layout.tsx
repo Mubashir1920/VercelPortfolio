@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from 'next'
-import {Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
+import { Montserrat, Bebas_Neue } from 'next/font/google'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -11,17 +11,24 @@ export const viewport: Viewport = {
   themeColor: '#ffffff',
 }
 
+const montserrat = Montserrat({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-montserrat',
+  subsets: ['latin']
+})
+
+const bebas = Bebas_Neue({
+  subsets: ['latin'],
+  // weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400'],
+  variable: '--font-bebas',
+})
+
 export const metadata: Metadata = {
   title: 'Mubashir - Full Stack Developer',
   description:
     'Full Stack Developer skilled in building modern web applications using Next.js, React.js, and the MERN stack. Passionate about crafting fast, responsive, and scalable solutions.',
 }
-
-const inter = Inter({
-  variable: '--font-Inter',
-  weight: ['200', '300', '400', '500', '600', '700', '800'],
-  subsets: ['latin'],
-})
 
 export default function RootLayout({
   children,
@@ -31,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable}  bg-white tracking-tight antialiased dark:bg-zinc-950`}
+        className={`${bebas.variable} ${montserrat.variable}  font-montserrat  bg-primary  tracking-tight antialiased dark:bg-zinc-950`}
       >
         <ThemeProvider
           enableSystem={true}

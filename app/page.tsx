@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
-import { ArrowRightIcon, XIcon } from 'lucide-react'
+import { ArrowUpRight, XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
@@ -128,7 +128,7 @@ function MagneticSocialLink({
 export default function Personal() {
   return (
     <motion.main
-      className="space-y-24"
+      className="space-y-10"
       variants={VARIANTS_CONTAINER}
       initial="hidden"
       animate="visible"
@@ -138,22 +138,22 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex-1">
-          <Link href="/" className="font-medium text-black dark:text-white">
+          <Link href="/" className="secondary-heading">
             About Me
           </Link>
-          <p className="text-zinc-600 dark:text-zinc-400 capitalize">
+          <p className="text-secondary dark:text-zinc-100 capitalize">
             Full Stack Developer skilled in building modern web applications using Next.js, React.js, and the MERN stack. Passionate about crafting fast, responsive, and scalable solutions. Expert In Wordpress Solutions
           </p>
         </div>
-        <div className="flex-1 mt-10 ">
-          <Link href="/" className="font-medium text-black dark:text-white">
+        <div className="flex-1 mt-10  ">
+          <Link href="/" className="secondary-heading">
             Skills
           </Link>
-          <p className="text-zinc-600 dark:text-zinc-400 capitalize">
+          <p className="text-secondary flex flex-wrap gap-1 dark:text-zinc-100 capitalize">
             {Skills.map((skill, index) => (
               <span
                 key={index}
-                className="inline-block m-1 rounded-lg bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100"
+                className="inline-block border dark:border-zinc-900  rounded-lg bg-zinc-50 px-3 py-1 text-sm font-medium text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100"
               >
                 {skill}
               </span>
@@ -166,51 +166,52 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+        <h3 className="mb-5 secondary-heading">Selected Projects</h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 mb-5">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50  ">
                 {project.video && <ProjectVideo src={project.video} />}
                 {project.image && (
                   <Link href={project.link} target="_blank"  >
                     <Image
                       src={project.image}
                       alt={project.name}
-                      className="aspect-video w-full rounded-xl"
-                      width={500}
-                      height={500}
+                      className="aspect-video object-cover w-full rounded-xl"
+                      width={400}
+                      height={400}
                     />
                   </Link>
                 )}
               </div>
               <div className="px-1">
                 <a
-                  className="font-xl group relative font-semibold inline-block  text-zinc-900 dark:text-zinc-50"
+                  className="text-lg group relative font-bold tracking-tighter inline-block  text-zinc-900 dark:text-zinc-50"
                   href={project.link}
                   target="_blank"
                 >
                   {project.name}
-                  <span className="absolute  bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
+                  <span className="absolute  bottom-0.5 left-0 block h-[2px] w-full max-w-0 bg-zinc-900 dark:bg-cream transition-all duration-200 group-hover:max-w-full"></span>
                 </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
+                <p className="text-base text-secondary dark:text-zinc-100">
                   {project.description}
                 </p>
               </div>
             </div>
           ))}
         </div>
-        <span className='text-zinc-900 dark:text-zinc-300 hover:text-black italic dark:hover:text-white duration-300 transition-colors' >
+        <span className='text-zinc-900  relative group dark:text-zinc-300 hover:text-black font-semibold  dark:hover:text-white duration-300 transition-colors' >
           <a href="https://mubashirdev.netlify.app/projects" target='_blank' >
-            Explore More Projects < ArrowRightIcon size={20} className='inline-block' />
+            Explore More Projects < ArrowUpRight size={20} className=' inline-block ' />
           </a>
+          <span className="absolute  bottom- left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-cream transition-all duration-200 group-hover:max-w-full"></span>
         </span>
       </motion.section>
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
+        <h3 className="mb-5 secondary-heading">Work Experience</h3>
         <div className="flex flex-col space-y-2">
           {WORK_EXPERIENCE.map((job) => (
             <span
@@ -224,14 +225,14 @@ export default function Personal() {
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
                 <div className="relative flex w-full flex-row justify-between">
                   <div>
-                    <h4 className="font-normal dark:text-zinc-100">
+                    <h4 className="font-semibold text-lg dark:text-zinc-100">
                       {job.title}
                     </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
+                    <p className="text-zinc-800 dark:text-zinc-100">
                       {job.company}
                     </p>
                   </div>
-                  <p className="text-zinc-600 dark:text-zinc-400">
+                  <p className="text-secondary dark:text-zinc-100">
                     {job.start} - {job.end}
                   </p>
                 </div>
@@ -245,7 +246,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
+        <h3 className="mb-3 secondary-heading">Blog</h3>
         <div className="flex flex-col space-y-0">
           <AnimatedBackground
             enableHover
@@ -267,7 +268,7 @@ export default function Personal() {
                   <h4 className="font-normal dark:text-zinc-100">
                     {post.title}
                   </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
+                  <p className="text-zinc-500 dark:text-zinc-100">
                     {post.description}
                   </p>
                 </div>
@@ -281,8 +282,8 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Connect</h3>
-        <p className="mb-5 text-zinc-600 dark:text-zinc-400">
+        <h3 className="mb-5 secondary-heading">Connect</h3>
+        <p className="mb-5 text-secondary dark:text-zinc-100">
           Feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
             {EMAIL}
