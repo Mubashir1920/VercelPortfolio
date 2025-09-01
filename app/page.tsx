@@ -149,7 +149,7 @@ export default function Personal() {
           <Link href="/" className="secondary-heading">
             Skills
           </Link>
-          <p className="text-secondary flex flex-wrap gap-1 dark:text-zinc-100 capitalize">
+          <p className="text-secondary flex flex-wrap gap-1.5 dark:text-zinc-100 capitalize">
             {Skills.map((skill, index) => (
               <span
                 key={index}

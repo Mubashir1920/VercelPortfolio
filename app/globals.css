@@ -2,8 +2,6 @@
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:is(.dark *));
 
-
-
 @theme {
   --color-primary: #fff;
   --color-secondary: #000000;
@@ -14,11 +12,11 @@
 
 @layer components {
   .primary-heading {
-    @apply text-secondary font-bebas text-5xl sm:text-6xl  font-bold tracking-normal dark:text-cream uppercase;
+    @apply text-secondary font-bebas dark:text-cream text-5xl font-bold tracking-normal uppercase sm:text-6xl;
   }
 
   .secondary-heading {
-    @apply text-secondary font-bebas text-3xl sm:text-4xl font-bold tracking-normal uppercase dark:text-cream;
+    @apply text-secondary font-bebas dark:text-cream text-3xl font-bold tracking-normal uppercase sm:text-4xl;
   }
 }
 
@@ -29,5 +27,9 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  ::selection {
+    @apply bg-secondary text-primary  dark:text-secondary dark:bg-primary ;
   }
 }
